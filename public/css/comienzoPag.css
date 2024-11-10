@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1ededcb;
+}
+
+header {
+    background-color: #9aafc7;
+    padding: 5px; /* Padding reducido para un header más angosto */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 2px -2px #c0ecf0; /* Sombra en el header */
+}
+
+header h1 {
+    margin: 0;
+    color: black;
+    font-size: 20px; /* Tamaño de fuente reducido */
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: underline; /* Subrayado del título */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo con sombra en el centro */
+    padding: 5px;
+    border-radius: 5px; /* Bordes redondeados para el sombreado */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuir contenido en los extremos */
+    flex-wrap: wrap;
+}
+
+.doctor-image {
+    width: 50px; /* Reducir tamaño de la imagen */
+    height: 50px; /* Reducir tamaño de la imagen */
+    border-radius: 50%;
+}
+
+.navbar-toggler {
+    background-color: #c0ecf0;
+    border: none;
+    color: rgb(14, 13, 13);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px; /* Reducir padding del botón */
+    margin-left: auto; /* Mover el botón al lado derecho */
+}
+
+.navbar-menu {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 100%;
+    background-color: rgb(253, 252, 252);
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+/* Eliminar subrayado del enlace */
+.navbar-menu a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: rgb(19, 18, 18); /* Asegúrate de que el color del texto sea blanco o el color que prefieras */
+    font-weight: bold; /* Opcional: Puedes hacer el texto más grueso si lo deseas */
+}
+
+.navbar-menu a:hover {
+    color: #7da8da; /* Cambia el color del texto al pasar el ratón si lo deseas */
+}
+
+.login-button {
+    background-color: #c0ecf0;
+    color: rgb(20, 20, 20);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.images-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.consultorio-image,
+iframe {
+    width: 100%;
+    max-width: 336px;
+    height: 203px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    padding: 20px;
+    background-color: rgba(245, 227, 240, 0.829);
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    color: #4c7aaf;
+}
+
+contact-info p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+contact-info i {
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #3b4647;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* para Responsividad */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-menu {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .images-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .consultorio-image,
+    iframe {
+        max-width: 100%;
+    }
+}

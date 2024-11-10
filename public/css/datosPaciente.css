@@ -1,0 +1,81 @@
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(76, 217, 241, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background-color: rgb(249, 250, 250);
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 668px;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: 30px; /* Ajusta el tamaño según sea necesario */
+    background-color: rgb(190, 67, 67); /* Fondo de la cruz */
+    color: rgb(10, 10, 10); /* Color del icono */
+    border-radius: 20%; /* Forma circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; /* Tamaño del icono */
+    cursor: pointer;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .table-container div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .table-container .label {
+    font-weight: bold;
+  }
+
+  .table-container .dato {
+    font-weight: 600;
+  }
+  /* Estilo para el título con borde inferior */
+h2 {
+    border-bottom: 2px solid black; /* Ajusta el color y el grosor según tu preferencia */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+  }
+   /* Estilos responsivos */
+   @media (max-width: 659px) {
+    .container {
+      padding: 10px;
+      max-width: 100%; /* Ancho máximo en dispositivos pequeños */
+    }
+    .table-container {
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+    .modal-content {
+      width: 80%;
+      padding: 15px;
+    }
+    .form-group button {
+      padding: 10px 20px;
+    }
+  }

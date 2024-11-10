@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="icon" href="../img/icono-usuario.png"> <!-- Ruta a tu ícono -->
+    <link rel="stylesheet" type="text/css" href="../css/login_register.css">
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Iniciar sesión</h2>
+        <form id="loginForm">
+            <div class="image-container">
+                <img src="../img/CMU LETRAS.jpg" alt="Imagen de usuario" class="user-image"> <!-- Ruta relativa al archivo CMU LETRAS.jpg -->
+            </div>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <div id="loginError" class="error-message"></div>
+            <div class="buttons">
+                <a href="register" class="button-link">Registrarse</a>
+                <button type="submit">Ingresar</button>
+            </div>
+            <div class="forgot-password">
+                <a href="#" id="forgot-password">¿Olvidaste tu contraseña?</a>
+            </div>
+        </form>
+    </div>
+
+<!-- Ventana emergente -->
+<div id="passwordPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" id="closePopup">&times;</span>
+        <h3>Recuperar contraseña</h3>
+        <label for="email"><b>Correo electrónico</b></label>
+        <input type="email" placeholder="Colocar el mail" name="email" id="email" required>
+        <button class="btn" id="recoverPasswordBtn">Buscar</button>
+    </div>
+</div>
+
+<script src="../js/inicioSesion.js"></script>
+</body>
+</html>

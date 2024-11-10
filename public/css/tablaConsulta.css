@@ -1,0 +1,214 @@
+/* Estilos para el contenedor principal */
+.container {
+    width: 100%; /* Ancho completo */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #96e4eb;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+
+
+  /* Estilos para los elementos dentro del contenedor */
+    .form-group {
+        display: inline-block;
+        width: calc(50% - 10px); /* Ancho del 50% menos el margen */
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        vertical-align: top; /* Alinear elementos en la parte superior */
+      }
+  
+      .form-group label {
+        font-weight: bold;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-group .requerido::after {
+        content: '*';
+        color: rgb(218, 11, 11);
+        margin-left: 5px;
+        font-weight: 600;
+      }
+  
+      .form-group input,
+      .form-group textarea {
+        width: calc(100% - 12px); /* Ancho completo menos el padding */
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #ffffff;
+        box-sizing: border-box;
+      }
+  
+      .form-group textarea {
+        resize: vertical; /* Permitir redimensionar verticalmente */
+      }
+  
+      .btn-container {
+        text-align: right; /* Alinear botones a la derecha */
+        margin-top: 15px; /* Espacio arriba de los botones */
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        margin-left: 10px; /* Espacio entre botones */
+      }
+  
+      .btn:hover {
+        background-color: #0056b3;
+      }
+  
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        /* background-color: #9aafc7; */
+        background-color: #e4d2c2;
+        min-width: fit-content;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        top: -150px;
+      }
+  
+      .dropdown-content a {
+        color: black;
+        padding: 16px 16px;
+        text-decoration: none;
+        display: block;
+        white-space: nowrap; /* Evitar el salto de línea */
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      
+    .dropdown-content a:hover {
+        /* background-color: #f1f1f1; */
+        background-color: #e4bb97;
+      }
+  
+      .show {
+        display: block;
+      }
+  
+      @media (max-width: 768px) {
+        .form-group {
+          width: 100%; /* Cambiar a ancho completo en pantallas pequeñas */
+          margin-right: 0;
+        }
+      }
+
+
+
+/* Estilo para la opción desplegable */
+.dropdown-content {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  /* background-color: #c2d2e4; */
+  background-color: #e4d2c2;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out; /* Agrega transición para deslizamiento */
+  max-height: 0; /* Altura máxima inicial es cero */
+  overflow: hidden; /* Oculta contenido que sobrepase la altura */
+  opacity: 0; /* Inicia con opacidad 0 */
+  bottom: 100%; /* Posiciona el menú justo encima del botón */
+  left: 0; /* Alinea el menú desplegable con el lado izquierdo del botón */
+}
+.dropdown-content {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  /* background-color: #c2d2e4; */
+  background-color: #e4d2c2;
+  width: 200px; /* Ajusta el ancho según sea necesario */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: visible; /* Asegura que no haya desplazamiento */
+  height: auto; /* Ajusta la altura según el contenido */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Muestra el menú desplegable al pasar el mouse */
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Muestra el desplegable */
+  max-height: 300px; /* Ajusta la altura máxima a la altura real del contenido */
+  opacity: 1; /* Hace visible el contenido */
+}
+
+    /* Estilo para la ventana emergente */
+    .modal {
+        display: none; /* Oculto por defecto */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+  
+      .modal-content {
+        background-color: white;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+        border-radius: 10px;
+      }
+  
+      .modal-content button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      .modal-content button:hover {
+        background-color: #0056b3;
+      }
+      
+    /* Estilo para el contenedor del PDF */
+      #pdfModal {
+        display: none; /* Oculto por defecto */
+      }
+  
+      #pdfModal .modal-content {
+        text-align: center;
+      }
+  
+      #pdfModal .modal-content iframe {
+        width: 100%;
+        height: 80vh;
+        border: none;
+      }
+      
+.idPatient {
+  display: none;
+}
+
+.dropdown #enviarDropdown {
+  position: absolute;
+  left: -85px;
+}

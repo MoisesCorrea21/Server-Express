@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #96e4eb; /* Color de fondo */
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo del contenido */
+    overflow: auto; /* Hacer scroll si el contenido es largo */
+    background-color: #96e4eb;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: 30px; /* Ajusta el tamaño según sea necesario */
+    background-color: rgb(190, 67, 67); /* Fondo de la cruz */
+    color: rgb(20, 20, 20); /* Color del icono */
+    border-radius: 20%; /* Forma circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; /* Tamaño del icono */
+    cursor: pointer;
+    text-align: center;
+    line-height: 1;
+  }
+  /* Estilo para el título con borde inferior */
+  h2 {
+    border-bottom: 2px solid black; /* Ajusta el color y el grosor según tu preferencia */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+  }

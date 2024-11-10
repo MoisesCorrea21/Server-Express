@@ -1,0 +1,443 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f3f3;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1000px; /* Aumentado el ancho máximo */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #96e4eb;
+  border-radius: 8px;
+  border: 1px solid #2ef390;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+  background-color: rgb(250, 254, 255);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 16px; /* Tamaño de fuente un poco mayor */
+        table-layout: auto;
+      }
+      th, td {
+        padding: 12px; /* Aumentado el padding */
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+        font-size: 18px; /* Tamaño de fuente del encabezado */
+        font-weight: bold;
+      }
+      td {
+        font-size: 16px; /* Tamaño de fuente de las celdas */
+      }
+      .search-container {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Espacio entre la barra de búsqueda y el botón */
+      } 
+      th {
+        text-align: left;
+        position: relative;
+        padding-bottom: 20px; /* Espacio para las flechas */
+      }
+      
+      tr:hover {
+        /* background-color: rgba(0, 0, 0, 0.062); */
+        background-color: #ecb8b8;
+      }
+
+      .sort-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px; /* Espacio entre el encabezado y las flechas */
+      }
+      
+      .sort-icons i {
+        font-size: 20px; /* Ajusta el tamaño de las flechas */
+        margin: 0 5px; /* Espacio entre las flechas */
+        cursor: pointer; /* Cambia el cursor al pasar sobre las flechas */
+      }
+      
+      .search-input {
+        flex-grow: 1; /* Permitir que la barra de búsqueda ocupe el espacio disponible */
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px; /* Tamaño de fuente del buscador */
+        box-sizing: border-box;
+      }
+      .action-buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .action-buttons button {
+        padding: 10px 20px; /* Ajuste de tamaño para los botones */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px; /* Tamaño de fuente de los botones */
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      .action-buttons button:hover {
+        opacity: 0.8;
+      }
+    
+    .btn-blue {
+      background-color: #3490dc;
+      color: rgb(12, 12, 12);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .btn-green {
+      background-color: #38c172;
+      color: rgb(14, 13, 13);
+    }
+    .btn-yellow {
+      background-color: #f6e05e;
+      color: rgb(20, 20, 20);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .btn-return {
+        padding: 10px 20px; /* Ajuste de tamaño igual a los otros botones */
+        background-color: #3490dc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      .btn-return:hover {
+        opacity: 0.8;
+      }
+      .btn-pink {
+        background-color: #eb5cbb;
+        color: rgb(12, 12, 12);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      /* Estilos para el modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .modal-content {
+        background-color: rgb(248, 248, 248);
+        width: 60%;
+        max-width: 600px;
+        margin: 100px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        text-align: center; /* Alineación centrada para el contenido */
+      }
+      .modal-close {
+        width: 30px; /* Ajusta el tamaño según sea necesario */
+        height: 30px; /* Ajusta el tamaño según sea necesario */
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: rgb(190, 67, 67); /* Fondo de la cruz */
+        color: rgb(10, 10, 10); /* Color del icono */
+        border-radius: 40%; /* Forma circular */
+        font-size: 30px; /* Tamaño del icono */
+      }
+      
+      .modal-close:hover,
+      .modal-close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .buttons-group {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+        text-align: left; /* Alineación izquierda para los labels */
+      }
+      .form-group label {
+        display: block;
+        /* font-weight: bold; */
+        margin-bottom: 5px;
+      }
+      .form-group input {
+        width: calc(100% - 16px); /* Ajustar el ancho para evitar desbordamiento */
+        padding: 8px;
+        font-size: 14px; /* Tamaño de fuente del input en el modal */
+        font-weight: 600;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .form-group button {
+        padding: 10px 20px; /* Ajuste de tamaño para los botones */
+        margin-top: 20px;
+        font-size: 16px; /* Tamaño del texto del botón */
+      }
+  
+      .success-message {
+        color: #38c172;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+  
+    /* Estilos responsivos */
+    @media screen and (max-width: 768px) {
+        .container {
+          padding: 10px;
+          max-width: 100%; /* Ancho máximo en dispositivos pequeños */
+        }
+        .table-container {
+          overflow-x: auto;
+          margin-top: 10px;
+        }
+        .modal-content {
+          width: 80%;
+          padding: 15px;
+        }
+        .form-group button {
+          padding: 10px 20px;
+        }
+
+        table {
+          display: block;
+          width: 100%;
+        }
+
+        thead {
+          display: none;
+        }
+
+        tr {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-bottom: 10px;
+          /* width: 100%; */
+        }
+
+        td {
+          display: block;
+          text-align: center;
+          position: relative;
+          /* padding-left: 50%; */
+        }
+
+        td:before {
+          content: attr(data-label); /* Mostrar el nombre de la columna en cada celda */
+          position: absolute;
+          left: 0;
+          width: 50%;
+          padding-left: 10px;
+          font-weight: bold;
+          text-align: left;
+      }
+
+      .action-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      }
+
+      @media screen and (max-width: 480px) {
+        /* td {
+            padding-left: 45%;
+        } */
+
+         tr {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+         }
+
+         .action-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+         }
+      }
+       /* Estilo para el título con borde inferior */
+h2 {
+  border-bottom: 2px solid black; /* Ajusta el color y el grosor según tu preferencia */
+  padding-bottom: 5px; /* Espacio entre el texto y la línea */
+}
+.sort-icons {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.bi-arrow-up, .bi-arrow-down {
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: bold; /* Hace que las flechas sean negritas */
+  color: black; /* Asegura que el color de las flechas sea negro */
+}
+
+/* Estilo para el botón "Datos Paciente" */
+.btn-purple {
+  background-color: #b391f3; /* Color violeta */
+}
+
+.btn-purple:hover {
+  background-color: #ccb5fc; /* Color violeta más oscuro al pasar el mouse */
+}
+.sort-icons {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.bi-arrow-up, .bi-arrow-down {
+  font-size: 12px;
+  margin-left: 5px;
+}
+.sort-icons {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.bi-arrow-up, .bi-arrow-down {
+  font-size: 15px;
+  margin-left: 5px;
+  font-weight: bold; /* Hace que las flechas sean negritas */
+  color: rgb(12, 12, 12); /* Asegura que el color de las flechas sea negro */
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  text-align: center;
+}
+
+.modal-close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #38ac38;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #e99999;
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.btn-grey {
+  background-color: rgb(124, 123, 123);
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.btn-verde {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.btn-red:hover,
+.btn-grey:hover,
+.btn-verde:hover {
+  filter: opacity(70%);
+}

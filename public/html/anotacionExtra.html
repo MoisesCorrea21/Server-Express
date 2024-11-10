@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotaciones</title>
+    <link rel="icon" href="../img/icono_nutricionista.png">
+    <link rel="stylesheet" href="../css/anotacionExtra.css">
+</head>
+<body>
+    <div class="anotaciones-container">
+        <h2>Anotaciones Extras</h2>
+        <label for="patient">Paciente</label>
+        <input type="text" id="patient" name="patient" placeholder="Buscar por  apellido o DNI">
+
+        <ul id="list-pacientes" class="list-pacientes"></ul>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha">
+        <textarea id="anotaciones" name="anotaciones" placeholder="Escribe tus anotaciones aquí..."></textarea>
+        <div class="botones">
+            <div class="guardar-dropdown">
+                <button class="guardar-btn">Guardar</button>
+                <div class="guardar-opciones">
+                    <button onclick="guardarContinuar()">Guardar y Continuar</button>
+                    <button onclick="guardarSalir()">Guardar y Salir</button>
+                    <button onclick="salir()">Salir</button>
+                </div>
+            </div>
+            <button class="archivar-btn" onclick="redirigir()">Archivo</button>
+        </div>
+    </div>
+    <!-- Modales -->
+    <div id="guardarContinuarModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('guardarContinuarModal')">&times;</span>
+            <p>Anotación guardada exitosamente.</p>
+        </div>
+    </div>
+
+    <div id="guardarSalirModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('guardarSalirModal')">&times;</span>
+            <p>Anotación guardada exitosamente.</p>
+        </div>
+    </div>
+
+    <script src="../js/anotacionExtra.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #c0ecf0; /* Color de fondo celeste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #96e4eb;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #585c56;
+    border-radius: 10px;
+    /* width: 80%; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /*width: 300px;*/ /* Ancho del contenedor */
+    width: 90%;
+    max-width: 400px;
+    min-width: 280px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button, .button-link {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #38b0d8; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quitar subrayado para el enlace */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+button:hover, .button-link:hover {
+    background-color: #79b3ce; /* Color de fondo al pasar el ratón */
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.user-image {
+    /*width: 200px;*/ /* Tamaño deseado para la imagen */
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 50%; /* Borde redondeado */
+    border: 3px solid #000; /* Borde negro opcional */
+}

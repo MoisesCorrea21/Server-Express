@@ -1,0 +1,176 @@
+body {
+    background-color: #f3f4f6;
+    font-family: Arial, sans-serif;
+}
+
+.anotaciones-container {
+    border: 2px solid #000;
+    background-color: #96e4eb;
+    padding: 20px;
+    width: 70%;
+    margin: 50px auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.anotaciones-container h2 {
+    text-decoration: underline;
+    color: #000;
+    text-align: center;
+}
+
+.anotaciones-container label {
+    display: block;
+    margin-top: 10px;
+}
+
+.anotaciones-container input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.anotaciones-container input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.anotaciones-container textarea {
+    width: calc(100% - 20px);
+    height: 150px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.anotaciones-container .list-pacientes {
+    display: none;
+    width: 100%;
+    max-width: 64%;
+    background-color: rgba(255, 255, 255, 0.822);
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+    list-style: none;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+.list-pacientes li {
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.list-pacientes li:hover {
+    background-color: rgba(197, 197, 197, 0.781);
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.guardar-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.guardar-btn, .archivar-btn {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.archivar-btn {
+    background-color: #008CBA;
+}
+
+.guardar-opciones {
+    display: none;
+    position: absolute;
+    /* background-color: #c2d2e4; */
+    background-color: #e4d2c2;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: -120px;
+    left: 0;
+    min-width: 200px;
+    width: 200px;
+}
+
+.guardar-opciones button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: transparent; /* Fondo transparente por defecto */
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.guardar-opciones button:hover {
+    /* background-color: white; */
+    background-color: #e2b187;
+}
+  /* Estilo del modal */
+  .modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Scroll si es necesario */
+    background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+}
+
+.modal-content {
+    background-color: #c1d6f5;
+    margin: 15% auto; /* Centro en la pantalla */
+    padding: 20px;
+    border: 1px solid #fcf8f8;
+    width: 80%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo del modal */
+    text-align: center;
+}
+
+.close {
+    color: #f76c6c;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.guardar-dropdown:hover .guardar-opciones {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .anotaciones-container {
+        width: 90%;
+    }
+
+    .guardar-btn, .archivar-btn {
+        width: 140px;
+    }
+}

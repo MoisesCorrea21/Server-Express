@@ -1,0 +1,171 @@
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: cover;
+}
+
+#title-container {
+  background-color: #c0ecf0;
+  padding: 20px 0;
+  color: rgb(14, 13, 13);
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c0ecf0;
+}
+
+h2 {
+  color: #333;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+#title-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#title-container h3 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown {
+  margin-left: auto;
+  position: relative;
+  right: 50px; /* Ajusta este valor para mover el menú más a la derecha */
+}
+
+/* Carrusel */
+.carousel {
+  margin-bottom: 20px;
+}
+
+/* Botones */
+.btn-block {
+  margin-bottom: 60px; /* Separación entre botones */
+}
+
+/* Pie de página */
+.footer {
+  background-color: #a4c296; /* Cambia este color al que desees */
+  padding: 20px 0;
+}
+
+.footer .text-muted {
+  color: rgb(10, 10, 10); /* Cambia el color del texto si es necesario */
+}
+
+
+.text-muted {
+  color: #6c757d;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  /* Estilos para pantallas pequeñas */
+}
+#title-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#title-container h3 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+#dropdownMenuButton {
+  margin-right: auto;
+}
+#title-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#title-container h3 {
+  margin: 0;
+}
+
+.dropdown {
+  margin-left: auto;
+}
+.dropdown-menu {
+  margin-top: 5px;
+}
+#title-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#title-container h3 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem; /* Ajustar tamaño de fuente para mejor visualización en móviles */
+}
+.dropdown {
+  margin-left: auto;
+  position: relative;
+  margin-right: 20px; /* Ajuste de margen para móviles */
+}
+.col-md-4 {
+  margin-bottom: 20px; /* Añadir margen inferior para más espacio entre los botones */
+}
+.btn-lg {
+  padding: 15px 0;
+  margin-top: 20px;
+}
+.btn-separation {
+  margin-bottom: 30px; /* Añadir margen inferior específico para más espacio entre los botones */
+}
+/* Estilo para los botones Agregar Paciente y Nueva Consulta */
+.btn-primary {
+  color: black; /* Letra negra por defecto */
+  background-color: #9aafc7; /* Color de fondo azul */
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  color: white; /* Letra blanca al pasar el mouse */
+  background-color: #0056b3; /* Color de fondo más oscuro al pasar el mouse */
+  border-color: #004085;
+}
+
+/* Estilo para el botón del menú desplegable */
+.btn-secondary {
+  color: black; /* Letra negra por defecto */
+  background-color: #9aafc7; /* Color de fondo gris */
+  border-color:  #007bff;
+}
+
+.btn-secondary:hover {
+  color: white; /* Letra blanca al pasar el mouse */
+  background-color: #5a6268; /* Color de fondo más oscuro al pasar el mouse */
+  border-color: #e1e5eb;
+}
+
+/* Estilo para los ítems dentro del menú desplegable */
+.dropdown-menu a.dropdown-item:hover {
+  background-color: #9aafc7; /* Color de fondo azul al pasar el mouse */
+  color: black; /* Letra negra por defecto */
+  color: white; /* Letra blanca al pasar el mouse */
+}
+

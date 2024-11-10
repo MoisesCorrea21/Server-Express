@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Pacientes</title>
+  <link rel="icon" href="../img/icono_nutricionista.png">
+  <link rel="stylesheet" href="../css/busquedaPaciente.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+<div class="container">
+  <h1 style="font-size: 24px; font-weight: bold; text-align: center; margin-bottom: 20px;">Selecciona un paciente</h1>
+  <div class="search-container">
+    <input
+      placeholder="Buscar por  apellido o DNI"
+      class="search-input"
+      id="search-input"
+      type="text"
+      value=""
+    />
+    <button class="btn-return" onclick="window.location.href='/Inicio'">Regresar</button>
+  
+  <!-- Botón desplegable Filtro -->
+  <div class="dropdown">
+    <button class="dropbtn">Filtro</button>
+    <div class="dropdown-content">
+      <a href="#" id="showHabilitados">Habilitados</a>
+      <a href="#" id="showDeshabilitados">Deshabilitados</a>
+      <a href="#" id="showTodos">Todos</a>
+    </div>
+  </div>
+</div>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 30%;">
+            Nombre y Apellido
+            <div class="sort-icons">
+              <i class="bi bi-arrow-up" onclick="sortTable('asc')"></i>
+              <i class="bi bi-arrow-down" onclick="sortTable('desc')"></i>
+            </div>
+          </th>
+          <th style="width: 30%;">DNI</th>
+          <th style="width: 40%;">Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr>
+          <td>Carlos Majul</td>
+          <td>12345688</td>
+          <td class="action-buttons">
+            <button type="button" class="btn-blue" onclick="redirectToConsulta('/consulta')">Consulta</button>
+            <button type="button" class="btn-green" onclick="redirectToPage('/historial')">Historial</button>
+            <button type="button" class="btn-yellow" onclick="openModal()">Modificar</button>
+            <button type="button" class="btn-purple" onclick="redirectToDatosPaciente('datos')">Datos</button>
+            <button type="button" class="btn-pink" onclick="redirectToAnotaciones('/anotacion')">Anotación</button>
+        <!-- Imagen del icono de bloqueo al lado de Anotaciones -->
+        <img src="../img/btn_deshabilitado.png" alt="Icono de Bloqueo" style="width: 20px; height: 20px; cursor: pointer; margin-top:8px;" onclick="openLockModal()">
+          </td>
+          
+        </tr>
+        <tr>
+          <td>Julieta Dominguez</td>
+          <td>39761933</td>
+          <td class="action-buttons">
+            <button type="button" class="btn-blue" onclick="redirectToConsulta('/consulta')">Consulta</button>
+            <button type="button" class="btn-green" onclick="redirectToPage('/historial')">Historial</button>
+            <button type="button" class="btn-yellow" onclick="openModal()">Modificar</button>
+            <button type="button" class="btn-purple" onclick="redirectToDatosPaciente('/datos')">Datos</button>
+            <button type="button" class="btn-pink" onclick="redirectToAnotaciones('/anotacion')">Anotación</button>
+         <!-- Imagen del icono de bloqueo al lado de Anotaciones -->
+         <img src="../img/btn_deshabilitado.png" alt="Icono de Bloqueo" style="width: 20px; height: 20px; cursor: pointer; margin-top:8px;" onclick="openLockModal()">
+          </td>
+          
+        </tr>
+        <tr>
+          <td>Juan Esteban</td>
+          <td>12345679</td>
+          <td class="action-buttons">
+            <button type="button" class="btn-blue" onclick="redirectToConsulta('/consulta')">Consulta</button>
+            <button type="button" class="btn-green" onclick="redirectToPage('/historial')">Historial</button>
+            <button type="button" class="btn-yellow" onclick="openModal()">Modificar</button>
+            <button type="button" class="btn-purple" onclick="redirectToDatosPaciente('/datos')">Datos</button>
+            <button type="button" class="btn-pink" onclick="redirectToAnotaciones('/anotacion')">Anotación</button>
+        <!-- Imagen del icono de bloqueo al lado de Anotaciones -->
+        <img src="../img/btn_deshabilitado.png" alt="Icono de Bloqueo" style="width: 20px; height: 20px; cursor: pointer; margin-top:8px;" onclick="openLockModal()">
+          </td>
+          
+        </tr>
+        <tr>
+          <td>Juan Pérez</td>
+          <td>12345678</td>
+          <td class="action-buttons">
+            <button type="button" class="btn-blue" onclick="redirectToConsulta('/consulta')">Consulta</button>
+            <button type="button" class="btn-green" onclick="redirectToPage('/historial')">Historial</button>
+            <button type="button" class="btn-yellow" onclick="openModal()">Modificar</button>
+            <button type="button" class="btn-purple" onclick="redirectToDatosPaciente('/datos')">Datos</button>
+            <button type="button" class="btn-pink" onclick="redirectToAnotaciones('/anotacion')">Anotación</button>
+         <!-- Imagen del icono de bloqueo al lado de Anotaciones -->
+         <img src="../img/btn_deshabilitado.png" alt="Icono de Bloqueo" style="width: 20px; height: 20px; cursor: pointer; margin-top:8px;" onclick="openLockModal()">
+          </td>
+          
+        </tr>
+        <tr>
+          <td>María González</td>
+          <td>87654321</td>
+          <td class="action-buttons">
+            <button type="button" class="btn-blue" onclick="redirectToConsulta('/consulta')">Consulta</button>
+            <button type="button" class="btn-green" onclick="redirectToPage('/historial')">Historial</button>
+            <button type="button" class="btn-yellow" onclick="openModal()">Modificar</button>
+            <button type="button" class="btn-purple" onclick="redirectToDatosPaciente('/datos')">Datos</button>
+            <button type="button" class="btn-pink" onclick="redirectToAnotaciones('/anotacion')">Anotación</button>
+         <!-- Imagen del icono de bloqueo al lado de Anotaciones -->
+         <img src="../img/btn_deshabilitado.png" alt="Icono de Bloqueo" style="width: 20px; height: 20px; cursor: pointer; margin-top:8px;" onclick="openLockModal()">
+          </td>
+          
+        </tr>
+        <tr>
+          <td>Carlos Rodríguez</td>
+          <td>13579086</td>
+          <td class="action-buttons">
+            <button type="button" class="btn-blue" onclick="redirectToConsulta('/consulta')">Consulta</button>
+            <button type="button" class="btn-green" onclick="redirectToPage('/historial')">Historial</button>
+            <button type="button" class="btn-yellow" onclick="openModal()">Modificar</button>
+            <button type="button" class="btn-purple" onclick="redirectToDatosPaciente('/datos')">Datos </button>
+            <button type="button" class="btn-pink" onclick="redirectToAnotaciones('/anotacion')">Anotación</button>
+          <!-- Imagen del icono de bloqueo al lado de Anotaciones -->
+          <img src="../img/btn_deshabilitado.png" alt="Icono de Bloqueo" style="width: 20px; height: 20px; cursor: pointer; margin-top:8px;" onclick="openLockModal()">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <!-- Modal de bloqueo -->
+  <div id="blockModal" class="modal">
+    <div class="modal-content">
+      <!-- Botón de cierre (cruz) -->
+      <span class="modal-close" id="closeBlockModal" onclick="closeBlockModal()">&times;</span>
+      <h2>¿Qué desea hacer?</h2>
+      <div class="buttons-group">
+        <button type="button" onclick="showDeleteModal()" class="btn-red" id="btn-eliminar">Eliminar</button>
+        <button type="button" onclick="deshabilitarPaciente()" class="btn-grey" id="btn-deshabilitar">Deshabilitar</button>
+        <button type="button" onclick="habilitarPaciente()" class="btn-verde" id="btn-habilitar">Habilitar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de confirmación de eliminación -->
+  <div id="deleteModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeDeleteModal()">&times;</span>
+      <h2>Paciente eliminado</h2>
+    </div>
+  </div>
+
+  <!-- Modal de confirmación de eliminación -->
+  <div id="deleteConfirmationModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeDeleteConfirmation()">&times;</span>
+      <h2>¿Seguro que desea eliminar?</h2>
+      <div class="buttons-group">
+        <button type="button" onclick="eliminarPaciente()" class="btn-verde" id="btn-confirm">Si</button>
+        <button type="button" onclick="closeDeleteConfirmation()" class="btn-red" id="btn-cancel">No</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <h2 id="title-modify">Modificar datos personales</h2>
+    <form>
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" value="123456789" placeholder="Ingrese el teléfono">
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" value="ejemplo@correo.com" placeholder="Ingrese el correo electrónico">
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" value="Calle Falsa 123" placeholder="Ingrese la dirección">
+      </div>
+      <button type="button" onclick="guardarDatos()" class="btn-blue">Guardar</button>
+
+      <div id="successMessage" class="success-message" style="display: none;">Guardado con éxito!</div>
+    </form>
+  </div>
+</div>
+
+<script src="../js/busquedaPaciente.js"></script>
+</body>
+</html>
